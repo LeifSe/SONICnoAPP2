@@ -1,0 +1,20 @@
+leifnoappvlan-SPINE-1 ansible_host=192.168.1.20
+leifnoappvlan-LEAF-1 ansible_host=192.168.1.22
+leifnoappvlan-SPINE-2 ansible_host=192.168.1.21
+leifnoappvlan-LEAF-2 ansible_host=192.168.1.23
+leifnoappvlan-LEAF-3 ansible_host=192.168.1.24
+leifnoappvlan-LEAF-4 ansible_host=192.168.1.25
+
+[spine]
+leifnoappvlan-SPINE-1
+leifnoappvlan-SPINE-2
+
+[leaf]
+leifnoappvlan-LEAF-1
+leifnoappvlan-LEAF-2
+leifnoappvlan-LEAF-3
+leifnoappvlan-LEAF-4
+
+[leifnoappvlan:children]
+spine
+leaf
